@@ -17,7 +17,7 @@
 <h3>Non GUI mode <br></h3>
 <h4>
   <p>1. Navigate to "apache-jmeter-5.4.3/bin" in console </p>
-  <p>2. For Mac: jmeter -n -t script_name</p>
+  <p>2. For Mac: jmeter -n -t script_name -DthreadCount=3 -DrampupPeriod=2 -DloopCount=1</p>
 <br>
 <p>Additional options:</p>
   <p>Increase heap and RAM that can be taken by Jmeter:<br>
