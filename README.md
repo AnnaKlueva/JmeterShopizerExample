@@ -17,11 +17,11 @@
 <h3>Non GUI mode <br></h3>
 <h4>
   <p>1. Navigate to "apache-jmeter-5.4.3/bin" in console </p>
-  <p>2. For Mac: jmeter -n -t <script_name></p>
+  <p>2. For Mac: jmeter -n -t script_name</p>
 <br>
 <p>Additional options:</p>
   <p>Increase heap and RAM that can be taken by Jmeter:<br>
-"set HEAP="-Xms1G -Xmx1G -XX:MaxMetaspaceSize=192m" && jmeter -n -t <script_name>"
+"set HEAP="-Xms1G -Xmx1G -XX:MaxMetaspaceSize=192m" && jmeter -n -t script_name"
   </p>
 </h4>
 
