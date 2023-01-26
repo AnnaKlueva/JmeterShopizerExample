@@ -84,7 +84,7 @@
           <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller: Get gategory id by code" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
-              <stringProp name="-2092942709">Shopizer test plan</stringProp>
+              <stringProp name="-1530209813">Shopizer_test_plan</stringProp>
               <stringProp name="85777941">Anonymous user scenario: add products to the basket</stringProp>
               <stringProp name="-1726835889">Test Fragment: Get category id</stringProp>
             </collectionProp>
@@ -96,7 +96,7 @@
           <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller: Navigate to category page and select product" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
-              <stringProp name="-2092942709">Shopizer test plan</stringProp>
+              <stringProp name="-1530209813">Shopizer_test_plan</stringProp>
               <stringProp name="85777941">Anonymous user scenario: add products to the basket</stringProp>
               <stringProp name="1681134839">Test Fragment: Navigate to category page</stringProp>
             </collectionProp>
@@ -151,7 +151,7 @@
           <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller: Get random number" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
-              <stringProp name="-2092942709">Shopizer test plan</stringProp>
+              <stringProp name="-1530209813">Shopizer_test_plan</stringProp>
               <stringProp name="85777941">Anonymous user scenario: add products to the basket</stringProp>
               <stringProp name="-1703174708">Test Fragment: Get randomNumber [0; 100]</stringProp>
             </collectionProp>
@@ -174,7 +174,7 @@
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller: Get category id by name" enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
-                <stringProp name="-2092942709">Shopizer test plan</stringProp>
+                <stringProp name="-1530209813">Shopizer_test_plan</stringProp>
                 <stringProp name="85777941">Anonymous user scenario: add products to the basket</stringProp>
                 <stringProp name="-1726835889">Test Fragment: Get category id</stringProp>
               </collectionProp>
@@ -183,7 +183,7 @@
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller: Select product from category page" enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
-                <stringProp name="-2092942709">Shopizer test plan</stringProp>
+                <stringProp name="-1530209813">Shopizer_test_plan</stringProp>
                 <stringProp name="85777941">Anonymous user scenario: add products to the basket</stringProp>
                 <stringProp name="1681134839">Test Fragment: Navigate to category page</stringProp>
               </collectionProp>
@@ -236,7 +236,7 @@
           <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller: Get random number" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
-              <stringProp name="-2092942709">Shopizer test plan</stringProp>
+              <stringProp name="-1530209813">Shopizer_test_plan</stringProp>
               <stringProp name="85777941">Anonymous user scenario: add products to the basket</stringProp>
               <stringProp name="-1703174708">Test Fragment: Get randomNumber [0; 100]</stringProp>
             </collectionProp>
