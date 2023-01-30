@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'THREAD_COUNT', defaultValue: '1', description: 'Thread count:')
+        string(name: 'RAMPUP_PERIOD', defaultValue: '1', description: 'Rampup period:')
+    }
+
+    stages {
+        stage('Prepare') {
+            steps {
+                // Get some code from a GitHub repository
+                git branch: 'main', url: 'https://github.com/AnnaKlueva/JmeterShopizerExample.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                // Run Jmeter
+                sh "/Users/akliuiev/Downloads/apache-jmeter-5.4.3/bin/jmeter -Jjmeter.save.saveservice.output_format=xml -n -t Shopizer_test_plan.jmx -DthreadCount=${params.THREAD_COUNT} -DrampupPeriod=${params.RAMPUP_PERIOD} -l report.jtl"
+            }
+        }
+        stage('Report') {
+            steps {
+                //Create report
+                perfReport filterRegex: '', graphType: 'PRT', modePerformancePerTestCase: true, modeThroughput: true, persistConstraintLog: true, showTrendGraphs: true, sourceDataFiles: '**/*.jtl'
+            }
+        }
+    }
+}
