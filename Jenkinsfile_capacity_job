@@ -12,16 +12,22 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/AnnaKlueva/JmeterShopizerExample.git'
             }
         }
-        stage('Build') {
+        stage("configure") {
             steps {
+                sh "mkdir ${env.WORKSPACE}/${env.BUILD_NUMBER}/"
+            }
+        }
+        stage('Build') {
+             steps {
                 // Run Jmeter
-                sh "/Users/akliuiev/Downloads/apache-jmeter-5.4.3/bin/jmeter -Jjmeter.save.saveservice.output_format=xml -n -t Shopizer_test_plan.jmx -DthreadCount=${params.THREAD_COUNT} -DrampupPeriod=${params.RAMPUP_PERIOD} -l report.jtl"
+                sh "/Users/akliuiev/Downloads/apache-jmeter-5.4.3/bin/jmeter -Jjmeter.save.saveservice.output_format=csv -n -t Shopizer_test_plan.jmx -DthreadCount=${params.THREAD_COUNT} -DrampupPeriod=${params.RAMPUP_PERIOD} -l ${env.WORKSPACE}/${env.BUILD_NUMBER}/report.jtl -e -o ${env.WORKSPACE}/${env.BUILD_NUMBER}/htmlReport"
             }
         }
         stage('Report') {
             steps {
                 //Create report
-                perfReport filterRegex: '', graphType: 'PRT', modePerformancePerTestCase: true, modeThroughput: true, persistConstraintLog: true, showTrendGraphs: true, sourceDataFiles: '**/*.jtl'
+                archiveArtifacts artifacts: "${env.BUILD_NUMBER}/report.jtl"
+                archiveArtifacts artifacts: "${env.BUILD_NUMBER}/htmlReport/index.html"
             }
         }
     }
